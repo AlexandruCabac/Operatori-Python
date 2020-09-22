@@ -1,4 +1,5 @@
-n=8153; a=0; b=0; c=0; d=0
+n=int(input())
+a=0; b=0; c=0; d=0
 a=n%10
 print(a)
 b=n//10%10
@@ -13,4 +14,8 @@ d=n//1000
 a=a+b+c+d
 print(a)
 a=n%10
-print(a,b,c,d,sep="")
+n=n//10
+while n>0:
+    a=a*10+n%10
+    n=n//10
+    print(a)
